@@ -1,0 +1,19 @@
+/* 
+  Localization.strings
+  BSCIdeasTask
+
+  Created by Radek Zmeskal on 27/05/2018.
+  Copyright © 2018 Radek Zmeskal. All rights reserved.
+*/
+
+"NOTES_TITLE" = "Poznamky";
+
+"CELL_EDIT" = "Upravit";
+"CELL_DELETE" = "Smazat";
+
+"NOTE" = "Poznamka";
+"NOTE_PLACEHOLDER" = "Vase poznamka";
+"NOTE_CHANGE" = "Zmenit";
+"NOTE_ADD" = "Pridat";
+"NOTE_CANCEL" = "Zrusit";
+"NOTE_OK" = "OK";

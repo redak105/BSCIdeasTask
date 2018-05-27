@@ -67,7 +67,7 @@ class DataManager: NSObject {
         }
         Alamofire.request(url,
                         method: .put,
-                        parameters: ["id": note.id, "title": title]
+                        parameters: [ "title": title]
             )
             .validate()
             .responseJSON { response in
@@ -77,7 +77,7 @@ class DataManager: NSObject {
                     return
                 }
                 
-                guard let result = response.result.value as? [[String: Any]] else {
+                guard let result = response.result.value as? [String: Any] else {
                     completion(false)
                     return
                 }

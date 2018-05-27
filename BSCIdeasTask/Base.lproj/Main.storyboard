@@ -10,7 +10,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Root View Controller-->
+        <!--Notes-->
         <scene sceneID="f5B-FD-TeM">
             <objects>
                 <tableViewController id="weA-QV-f3h" customClass="TasksTableViewController" customModule="BSCIdeasTask" customModuleProvider="target" sceneMemberID="viewController">
@@ -50,7 +50,7 @@
                             <outlet property="delegate" destination="weA-QV-f3h" id="c62-dt-urH"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="Aoz-bd-ZK0">
+                    <navigationItem key="navigationItem" title="Notes" id="Aoz-bd-ZK0">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="q0Y-wP-ikM">
                             <connections>
                                 <action selector="touchAdd:" destination="weA-QV-f3h" id="N93-2D-KWj"/>

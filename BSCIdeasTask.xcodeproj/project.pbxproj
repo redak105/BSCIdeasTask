@@ -14,8 +14,22 @@
 		5D5FA66220B7969B003B3361 /* TasksTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5FA66120B7969B003B3361 /* TasksTableViewController.swift */; };
 		5D5FA66520B798BE003B3361 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5FA66420B798BE003B3361 /* DataManager.swift */; };
 		5D5FA66920B799CF003B3361 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5FA66820B799CF003B3361 /* Note.swift */; };
+		5D5FA67120B99B2F003B3361 /* BSCIdeasTaskTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5FA67020B99B2F003B3361 /* BSCIdeasTaskTests.swift */; };
+		5D5FA67A20BAE265003B3361 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 5D5FA67C20BAE265003B3361 /* Localizable.strings */; };
+		5D5FA67F20BAE41B003B3361 /* Localizable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5FA67E20BAE41B003B3361 /* Localizable.swift */; };
+		5D5FA68220BB434C003B3361 /* String.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D5FA68120BB434C003B3361 /* String.swift */; };
 		D7DEC66FB40EABCA80BAD91B /* Pods_BSCIdeasTask.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 78F521987FEDA7216198D209 /* Pods_BSCIdeasTask.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5D5FA67320B99B2F003B3361 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5D5FA64420B78DC4003B3361 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5D5FA64B20B78DC4003B3361;
+			remoteInfo = BSCIdeasTask;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		014CDF5999E36E8E6A281E69 /* Pods-BSCIdeasTask.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BSCIdeasTask.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BSCIdeasTask/Pods-BSCIdeasTask.debug.xcconfig"; sourceTree = "<group>"; };
@@ -28,6 +42,13 @@
 		5D5FA66120B7969B003B3361 /* TasksTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasksTableViewController.swift; sourceTree = "<group>"; };
 		5D5FA66420B798BE003B3361 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 		5D5FA66820B799CF003B3361 /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
+		5D5FA66E20B99B2E003B3361 /* BSCIdeasTaskTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BSCIdeasTaskTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5D5FA67020B99B2F003B3361 /* BSCIdeasTaskTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BSCIdeasTaskTests.swift; sourceTree = "<group>"; };
+		5D5FA67220B99B2F003B3361 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5D5FA67B20BAE265003B3361 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		5D5FA67D20BAE288003B3361 /* cs */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = cs; path = cs.lproj/Localizable.strings; sourceTree = "<group>"; };
+		5D5FA67E20BAE41B003B3361 /* Localizable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localizable.swift; sourceTree = "<group>"; };
+		5D5FA68120BB434C003B3361 /* String.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = String.swift; sourceTree = "<group>"; };
 		78F521987FEDA7216198D209 /* Pods_BSCIdeasTask.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BSCIdeasTask.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7FE2C1EC548795C9D181B00D /* Pods-BSCIdeasTask.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BSCIdeasTask.release.xcconfig"; path = "Pods/Target Support Files/Pods-BSCIdeasTask/Pods-BSCIdeasTask.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -38,6 +59,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				D7DEC66FB40EABCA80BAD91B /* Pods_BSCIdeasTask.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5D5FA66B20B99B2E003B3361 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -57,6 +85,7 @@
 			isa = PBXGroup;
 			children = (
 				5D5FA64E20B78DC4003B3361 /* BSCIdeasTask */,
+				5D5FA66F20B99B2F003B3361 /* BSCIdeasTaskTests */,
 				5D5FA64D20B78DC4003B3361 /* Products */,
 				252FEDCC402F6E6647F55165 /* Pods */,
 				C75E3203EED59E5BEEAECC01 /* Frameworks */,
@@ -67,6 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				5D5FA64C20B78DC4003B3361 /* BSCIdeasTask.app */,
+				5D5FA66E20B99B2E003B3361 /* BSCIdeasTaskTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -74,6 +104,7 @@
 		5D5FA64E20B78DC4003B3361 /* BSCIdeasTask */ = {
 			isa = PBXGroup;
 			children = (
+				5D5FA68020BB4330003B3361 /* Extensions  */,
 				5D5FA66720B799B6003B3361 /* Model */,
 				5D5FA66620B798C4003B3361 /* Managers */,
 				5D5FA66320B796A7003B3361 /* Controllers */,
@@ -82,6 +113,8 @@
 				5D5FA65620B78DC4003B3361 /* Assets.xcassets */,
 				5D5FA65820B78DC4003B3361 /* LaunchScreen.storyboard */,
 				5D5FA65B20B78DC4003B3361 /* Info.plist */,
+				5D5FA67E20BAE41B003B3361 /* Localizable.swift */,
+				5D5FA67C20BAE265003B3361 /* Localizable.strings */,
 			);
 			path = BSCIdeasTask;
 			sourceTree = "<group>";
@@ -108,6 +141,23 @@
 				5D5FA66820B799CF003B3361 /* Note.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		5D5FA66F20B99B2F003B3361 /* BSCIdeasTaskTests */ = {
+			isa = PBXGroup;
+			children = (
+				5D5FA67020B99B2F003B3361 /* BSCIdeasTaskTests.swift */,
+				5D5FA67220B99B2F003B3361 /* Info.plist */,
+			);
+			path = BSCIdeasTaskTests;
+			sourceTree = "<group>";
+		};
+		5D5FA68020BB4330003B3361 /* Extensions  */ = {
+			isa = PBXGroup;
+			children = (
+				5D5FA68120BB434C003B3361 /* String.swift */,
+			);
+			path = "Extensions ";
 			sourceTree = "<group>";
 		};
 		C75E3203EED59E5BEEAECC01 /* Frameworks */ = {
@@ -140,6 +190,24 @@
 			productReference = 5D5FA64C20B78DC4003B3361 /* BSCIdeasTask.app */;
 			productType = "com.apple.product-type.application";
 		};
+		5D5FA66D20B99B2E003B3361 /* BSCIdeasTaskTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5D5FA67720B99B2F003B3361 /* Build configuration list for PBXNativeTarget "BSCIdeasTaskTests" */;
+			buildPhases = (
+				5D5FA66A20B99B2E003B3361 /* Sources */,
+				5D5FA66B20B99B2E003B3361 /* Frameworks */,
+				5D5FA66C20B99B2E003B3361 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5D5FA67420B99B2F003B3361 /* PBXTargetDependency */,
+			);
+			name = BSCIdeasTaskTests;
+			productName = BSCIdeasTaskTests;
+			productReference = 5D5FA66E20B99B2E003B3361 /* BSCIdeasTaskTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -154,6 +222,11 @@
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
 					};
+					5D5FA66D20B99B2E003B3361 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 5D5FA64B20B78DC4003B3361;
+					};
 				};
 			};
 			buildConfigurationList = 5D5FA64720B78DC4003B3361 /* Build configuration list for PBXProject "BSCIdeasTask" */;
@@ -163,6 +236,7 @@
 			knownRegions = (
 				en,
 				Base,
+				cs,
 			);
 			mainGroup = 5D5FA64320B78DC4003B3361;
 			productRefGroup = 5D5FA64D20B78DC4003B3361 /* Products */;
@@ -170,6 +244,7 @@
 			projectRoot = "";
 			targets = (
 				5D5FA64B20B78DC4003B3361 /* BSCIdeasTask */,
+				5D5FA66D20B99B2E003B3361 /* BSCIdeasTaskTests */,
 			);
 		};
 /* End PBXProject section */
@@ -180,8 +255,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				5D5FA65A20B78DC4003B3361 /* LaunchScreen.storyboard in Resources */,
+				5D5FA67A20BAE265003B3361 /* Localizable.strings in Resources */,
 				5D5FA65720B78DC4003B3361 /* Assets.xcassets in Resources */,
 				5D5FA65520B78DC4003B3361 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5D5FA66C20B99B2E003B3361 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -233,14 +316,32 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D5FA68220BB434C003B3361 /* String.swift in Sources */,
 				5D5FA66220B7969B003B3361 /* TasksTableViewController.swift in Sources */,
 				5D5FA66520B798BE003B3361 /* DataManager.swift in Sources */,
+				5D5FA67F20BAE41B003B3361 /* Localizable.swift in Sources */,
 				5D5FA65020B78DC4003B3361 /* AppDelegate.swift in Sources */,
 				5D5FA66920B799CF003B3361 /* Note.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		5D5FA66A20B99B2E003B3361 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5D5FA67120B99B2F003B3361 /* BSCIdeasTaskTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5D5FA67420B99B2F003B3361 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5D5FA64B20B78DC4003B3361 /* BSCIdeasTask */;
+			targetProxy = 5D5FA67320B99B2F003B3361 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		5D5FA65320B78DC4003B3361 /* Main.storyboard */ = {
@@ -259,6 +360,15 @@
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
+		5D5FA67C20BAE265003B3361 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5D5FA67B20BAE265003B3361 /* en */,
+				5D5FA67D20BAE288003B3361 /* cs */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
@@ -266,6 +376,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -323,6 +434,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
@@ -399,6 +511,36 @@
 			};
 			name = Release;
 		};
+		5D5FA67520B99B2F003B3361 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = BSCIdeasTaskTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = cz.radekzmeskal.BSCIdeasTaskTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BSCIdeasTask.app/BSCIdeasTask";
+			};
+			name = Debug;
+		};
+		5D5FA67620B99B2F003B3361 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = BSCIdeasTaskTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = cz.radekzmeskal.BSCIdeasTaskTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BSCIdeasTask.app/BSCIdeasTask";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -416,6 +558,15 @@
 			buildConfigurations = (
 				5D5FA65F20B78DC4003B3361 /* Debug */,
 				5D5FA66020B78DC4003B3361 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5D5FA67720B99B2F003B3361 /* Build configuration list for PBXNativeTarget "BSCIdeasTaskTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5D5FA67520B99B2F003B3361 /* Debug */,
+				5D5FA67620B99B2F003B3361 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

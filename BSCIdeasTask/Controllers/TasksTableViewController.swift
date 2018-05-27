@@ -18,6 +18,8 @@ class TasksTableViewController: UITableViewController {
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
+        self.title = LOC_NOTES_TITLE
+        
         DataManager.fetchNotes(completion: { (notes) in
             if let notesArray = notes {
                 self.notes = notesArray
@@ -62,22 +64,23 @@ class TasksTableViewController: UITableViewController {
     }
     */
     
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        let note = self.notes[indexPath.row]
-        
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            
+    override func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+        // 1
+        let actionEdit = UITableViewRowAction(style: .normal, title: LOC_CELL_EDIT , handler: { (action:UITableViewRowAction, indexPath: IndexPath) -> Void in
+            let note = self.notes[indexPath.row]
+            self.showEdit(note: note)
+        })
+        let actionDelete = UITableViewRowAction(style: .destructive, title: LOC_CELL_DELETE , handler: { (action:UITableViewRowAction, indexPath: IndexPath) -> Void in
+            let note = self.notes[indexPath.row]
             DataManager.deleteNote(note: note, completion: { (result) in
                 if result {
                     self.notes.remove(at: indexPath.row)
                     tableView.deleteRows(at: [indexPath], with: .fade)
                 }
             })
-        } else if editingStyle == .insert {
-            self.showEdit(note: note)
-        }
+        })
+        // 5
+        return [ actionDelete, actionEdit]
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -112,9 +115,9 @@ class TasksTableViewController: UITableViewController {
     */
     
     func showDetail(note: Note) {
-        let alertController = UIAlertController(title: "Note", message: note.title, preferredStyle: .alert)
+        let alertController = UIAlertController(title: LOC_NOTE, message: note.title, preferredStyle: .alert)
         
-        let OKAction = UIAlertAction(title: "OK", style: .default)
+        let OKAction = UIAlertAction(title: LOC_NOTE_OK, style: .default)
         alertController.addAction(OKAction)
         
         self.present(alertController, animated: true)
@@ -122,21 +125,21 @@ class TasksTableViewController: UITableViewController {
     
     func showEdit(note: Note?) {
         
-        let alertController = UIAlertController(title: "Note", message: "", preferredStyle: .alert)
+        let alertController = UIAlertController(title: LOC_NOTE, message: "", preferredStyle: .alert)
         
         if let note = note {
             
             alertController.addTextField { textField in
-                textField.placeholder = "note"
+                textField.placeholder = LOC_NOTE_PLACEHOLDER
                 textField.text = note.title
             }
             
-            let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { action in
+            let cancelAction = UIAlertAction(title: LOC_NOTE_CANCEL, style: .cancel) { action in
                 
             }
             alertController.addAction(cancelAction)
             
-            let OKAction = UIAlertAction(title: "Change", style: .default) { action in
+            let OKAction = UIAlertAction(title: LOC_NOTE_CHANGE, style: .default) { action in
                 let loginTextField = alertController.textFields![0] as UITextField
                 
                 if let title = loginTextField.text {
@@ -150,15 +153,15 @@ class TasksTableViewController: UITableViewController {
             alertController.addAction(OKAction)
         } else {
             alertController.addTextField { textField in
-                textField.placeholder = "note"
+                textField.placeholder = LOC_NOTE_PLACEHOLDER
             }
             
-            let cancelAction = UIAlertAction(title: "Cancel", style: .cancel) { action in
+            let cancelAction = UIAlertAction(title: LOC_NOTE_CANCEL, style: .cancel) { action in
                 
             }
             alertController.addAction(cancelAction)
             
-            let OKAction = UIAlertAction(title: "Add", style: .default) { action in
+            let OKAction = UIAlertAction(title: LOC_NOTE_ADD, style: .default) { action in
                 let loginTextField = alertController.textFields![0] as UITextField
                 
                 if let title = loginTextField.text {
