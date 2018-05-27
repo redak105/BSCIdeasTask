@@ -14,10 +14,7 @@ class TasksTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
+        
         self.title = LOC_NOTES_TITLE
         
         DataManager.fetchNotes(completion: { (notes) in
@@ -53,19 +50,13 @@ class TasksTableViewController: UITableViewController {
         if let label = cell.viewWithTag(1) as? UILabel {
             label.text = note.title
         }
+        
         return cell
     }
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
+    
+    // MARK: - Table view delegate
     
     override func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
-        // 1
         let actionEdit = UITableViewRowAction(style: .normal, title: LOC_CELL_EDIT , handler: { (action:UITableViewRowAction, indexPath: IndexPath) -> Void in
             let note = self.notes[indexPath.row]
             self.showEdit(note: note)
@@ -79,40 +70,18 @@ class TasksTableViewController: UITableViewController {
                 }
             })
         })
-        // 5
         return [ actionDelete, actionEdit]
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let note = self.notes[indexPath.row]
         
+        self.tableView.deselectRow(at: indexPath, animated: false)
+        
+        let note = self.notes[indexPath.row]
         self.showDetail(note: note)
     }
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
+    
+    // MARK: - Functions
     
     func showDetail(note: Note) {
         let alertController = UIAlertController(title: LOC_NOTE, message: note.title, preferredStyle: .alert)
@@ -180,9 +149,9 @@ class TasksTableViewController: UITableViewController {
         self.present(alertController, animated: true)
     }
 
+    // MARK: - Actions
+    
     @IBAction func touchAdd(_ sender: UIBarButtonItem) {
         self.showEdit(note: nil)
     }
-    
-    
 }
